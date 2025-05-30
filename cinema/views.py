@@ -151,7 +151,7 @@ class MovieViewSet(
     )
     def list(self, request, *args, **kwargs):
         """Get list Movie"""
-        return super().list(*args, **kwargs)
+        return super().list(request, *args, **kwargs)
 
 
 class MovieSessionViewSet(viewsets.ModelViewSet):
@@ -210,7 +210,7 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
         ]
     )
     def list(self, request, *args, **kwargs):
-        return super().list(*args, **kwargs)
+        return super().list(request, *args, **kwargs)
 
 
 class OrderPagination(PageNumberPagination):
